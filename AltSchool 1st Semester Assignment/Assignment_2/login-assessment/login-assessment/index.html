@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <div class="logo-container">
+                    <img class="logo" src="/public/img/Logo.png" alt="main-logo">
+                </div>
+                <h1 class="hero-title">For Individuals</h1>
+                <p class="hero-text">Start benefiting from the wellness experience. For companies looking on increasing
+                    productivity, and
+                    improving organization wellness.</p>
+                <p class="hero-text2">Inspiring wholesome harmony for the mind, body and spirit, for everyone,
+                    everywhere.</p>
+            </div>
+        </section>
+        <section class="right">
+            <form class="login-form" action="#" method="post">
+                <div class="input-container">
+                    <div class="input-group">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" name="firstname" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lastname" required>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <div class="input-group">
+                        <label for="gender">Gender</label>
+                        <select name="gender" id="gender" aria-placeholder="select here">
+                            <option value="Select here" disabled selected>Male</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="start" name="dob" min="1960-01-01" max="2005-12-31" required
+                            placeholder="Select here" />
+
+                    </div>
+                </div>
+                <div class="input-container">
+                    <div class="input-group">
+                        <label for="weight">Weight (KG)</label>
+                        <input type="text" id="weight" name="weight" placeholder="Enter Weight">
+                    </div>
+                    <div class="input-group">
+                        <label for="height">Height (CM)</label>
+                        <input type="number" id="height" min="40" max="500" name="height"
+                            placeholder="Enter height here...">
+                    </div>
+                </div>
+                <div class="input-container">
+                    <div class="input-group">
+                        <label for="weight">Activity Level</label>
+                        <select name="activity" id="activity" placeholder="select here">
+                            <option value="Select here" disabled selected>Select here</option>
+                            <option value="Level 1">Level One</option>
+                            <option value="Level 2">Level Two</option>
+                            <option value="Level 3">Level Three</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <div class="input-group">
+                        <label for="passwordInput">Password</label>
+                        <div class="password">
+                            <input id="passwordInput" type="password" class="form-control" name="password"
+                                value="secret">
+                            <span onclick="myFunction()" class="fa-eye "> <img src="public/img/eye.png" alt=""></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <button type="submit" class="register-button"">Register</button>
+                </div>
+                <div class=" policy-container">
+                        <p class=" policy">By clicking Register, you agree to our <span class="text-link">Terms of
+                                Use</span>
+                            and
+                            our <span class="text-link">Privacy Policy</span>
+                        </p>
+                </div>
+            </form>
+        </section>
+        <p class="policy2">By clicking Register, you agree to our
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <span class="text-link pointer">Terms of Use</span>
+            </a>
+            and
+            our
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <span class="text-link">Privacy Policy</span>
+            </a>
+
+        </p>
+    </div>
+</body>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("passwordInput");
+        if (x.type === "password") {
+            x.type = "text"
+            // console.log(x.type)
+        } else {
+            x.type = "password";
+            // console.log(x.type)
+        }
+    }
+</script>
+
+</html>
